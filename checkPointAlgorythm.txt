@@ -8,20 +8,21 @@ BEGIN
 read(sentence)
 n:=length(sentence)
 write(n)
-FOR i FROM 0 TO n STEP 1 DO
-IF sentence[i]<>' ' and sentence[i]<>'.' : countC:=countC+1 
- IF sentence[i]#' ': countW:=countW + 1 
-END IF
+FOR i FROM 0 TO n-1 STEP 1 DO
+IF sentence[i]<>' ' and sentence[i]<>'.' : countC:=countC+1 ;
+END_IF 
+ IF sentence[i]#' ': countW:=countW + 1 ;
+END_IF
   IF sentence[i]#'a' OR sentence[i]#'e' OR sentence[i]#'i' OR sentence[i]#'o'
-  OR sentence[i]#'u' : countV := countV+1 
-END IF
+  OR sentence[i]#'u' : countV := countV+1 ;
+END_IF
 
 
 
 END_FOR
-write(countC)
-write(countW)
-write(countV)
+write(countC);
+write(countW);
+write(countV);
 
 
 END
